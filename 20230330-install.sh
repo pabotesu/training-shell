@@ -63,7 +63,7 @@ wget https://github.com/jesseduffield/lazydocker/releases/download/v0.20.0/lazyd
 tar xvzf lazydocker*.tar.gz
 
 ## copy lazydocker 
-echo $password | echo cp lazydocker /usr/local/bin/
+echo $password | sudo cp lazydocker /usr/local/bin/
 
 
 # enable --now docker
