@@ -69,4 +69,4 @@ echo $password | sudo cp lazydocker /usr/local/bin/
 # enable --now docker
 echo $password | sudo systemctl enable --now docker
 
-
+echo "you success install docker !!!"
