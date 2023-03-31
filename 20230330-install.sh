@@ -32,13 +32,13 @@ echo $password | sudo yum-config-manager --add-repo https://download.docker.com/
 
 ## install docker-ce
 echo $password | sudo yum install -y docker-ce \
-                                     docker-ce-cli \ 
+                                     docker-ce-cli \
                                      containerd.io
 
 ## install docker-compose
 
 ### download docker-compose
-echo $password | sudo curl -L https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+curl -OL https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-`uname -s`-`uname -m` | ls | grep docker-compose | head -1 | sudo xargs -i cp {} /usr/local/bin/docker-compose
 
 ### grant of exe authority
 echo $password | sudo chmod +x /usr/local/bin/docker-compose
